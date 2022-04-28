@@ -1,6 +1,9 @@
 class Solution:
 
     def digitSum(self, s: str, k: int) -> str:
+        if s == "1" or k >= len(s):
+            return s
+
         groups = self.division_into_groups(s, k)
         string_res = self.concat_list(groups)
 
